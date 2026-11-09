@@ -34,11 +34,34 @@ Elke keuze in drie regels: wat, waarom en het alternatief. Nieuwe keuzes komen o
 - **Waarom:** Wie mijn werk bekijkt, ziet niet alleen de code, maar ook hoe ik kies en hoe ik AI gebruik.
 - **Alternatief:** Lokaal houden en op de site samenvatten. Dan is er minder om te laten zien.
 
-## Nog open
+## B5. Claude staat in de commits
 
-Te beslissen voor of in fase 1. De voorstellen komen uit mijn mockup van 2 november.
+*9 november 2026*
 
-- **Claude zichtbaar in de commits?** In kayhardam.dev niet (17 oktober 2026), in Coachboard wel. Voorstel voor Lite: wel, omdat de werkwijze hier het verhaal is.
-- **Styling:** Tailwind (voorstel, staat in de vacatures) of CSS met tokens, zoals in mijn andere projecten.
-- **Bouwen en hosten:** Vite, en Cloudflare zoals mijn andere sites. De mockup noemde Pages; mijn sites draaien op Workers.
-- **Scope van fase 1:** één veld, spelers slepen, één pijl, delen via de link. De mockup liet bewust weg: stappen, talen, QR-code, versies van links en groottebudgetten. Voorstel: het groottebudget toch houden, want Core Web Vitals staan in de vacatures.
+- **Wat:** Commits van Claude staan op mijn naam, met mijn noreply-adres. Onderaan staat Claude als co-auteur, met een link naar de sessie, zoals in Coachboard.
+- **Waarom:** De werkwijze is hier het verhaal (B4). Wie de geschiedenis leest, ziet bij elke commit dat AI meedeed, en de pull request zegt wie wat deed.
+- **Alternatief:** Geen vermelding, zoals in kayhardam.dev. Dan staat het AI-verhaal alleen in [WERKWIJZE.md](WERKWIJZE.md) en de pull requests.
+
+## B6. Tailwind 4, zuinig gebruikt
+
+*9 november 2026*
+
+- **Wat:** Styling met Tailwind 4. De tokens staan in `@theme`, en een rij klassen die terugkomt, staat één keer in een klein component. Geen UI-kit.
+- **Waarom:** Tailwind staat in de vacatures en wil ik leren. De tokens blijven CSS-variabelen en sluiten aan op de variabelen in Figma (B3).
+- **Alternatief:** CSS Modules met tokens, zoals in mijn andere projecten. Geen afhankelijkheid, maar dan blijft Tailwind een gat.
+
+## B7. Bouwen, testen en hosten zoals in Coachboard
+
+*9 november 2026*
+
+- **Wat:** React met Vite, zonder framework erbovenop. Testen met Vitest, en met Playwright en axe. Cloudflare Workers serveert alleen de gebouwde bestanden: Workers Builds zet `main` live en geeft elke branch een eigen preview-adres.
+- **Waarom:** Dit ken ik al uit Coachboard, dus mijn tijd gaat naar React en Tailwind. Een bord heeft geen server nodig, en met de preview probeer ik elke pull request op mijn telefoon.
+- **Alternatief:** Cloudflare Pages, zoals mijn mockup noemde: dat wijkt af van mijn andere sites, en Workers kan meer. Of Next.js, dat een server meebrengt die Lite niet nodig heeft.
+
+## B8. Fase 1: de kern, met een budget
+
+*9 november 2026*
+
+- **Wat:** Eén veld, spelers verplaatsen (slepen en aantikken), één pijl en delen via de link, met een groottebudget in `npm run verify`. Slepen en de stand van het bord doe ik met React zelf, zonder bibliotheek. Nog niet: het toetsenbord (komt in een latere fase), stappen, talen, de QR-code en versies van links.
+- **Waarom:** Dit is de kern van Coachboard. Het budget hoort bij Core Web Vitals, die in de vacatures staan, en met aantikken werkt het bord ook zonder slepen (WCAG 2.5.7). Zonder bibliotheek leer ik React zelf, niet een laag erbovenop.
+- **Alternatief:** Het budget pas in stap 6 (meten), alleen slepen, of een bibliotheek voor slepen.
